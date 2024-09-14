@@ -10,6 +10,7 @@ def main():
                     " 5 Gentoo \n"
                     " 6 RHEL Based (CentOS, AlmaLinux, RockyLinux) \n"
                     " 7 Solus \n"
+                    " 8 MacOS"
                     " c Salir \n")
 
         if cmd == "1":
@@ -33,6 +34,10 @@ def main():
         elif cmd == "7":
             print("Solus")
             subprocess.run("sudo eopkg install yt-dlp", shell=True)
+        elif cmd == "8":
+            print("MacOS")
+            print("Necesitas tener homebrew instalado")
+            subprocess.run("brew install yt-dlp", shell=True)
         elif cmd == "c":
             print("Saliendo...")
             break
@@ -40,3 +45,4 @@ def main():
             print("Ingrese una respuesta válida, como por ejemplo '2'.")
 
 main()
+
